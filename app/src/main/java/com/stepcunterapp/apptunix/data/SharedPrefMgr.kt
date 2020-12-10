@@ -16,6 +16,7 @@ class SharedPrefMgr {
     private val kInitialStepCount = "initial_step_count"
     private lateinit var sharedPref: SharedPreferences
 
+
     fun init(context: Context) {
         sharedPref = context.getSharedPreferences(kPerfName, kPrivateMode)
     }

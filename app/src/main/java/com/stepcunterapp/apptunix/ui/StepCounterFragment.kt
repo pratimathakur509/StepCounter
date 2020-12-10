@@ -59,6 +59,7 @@ class StepCounterFragment : Fragment(), SensorEventListener {
         sensorManager = context?.getSystemService(Context.SENSOR_SERVICE) as SensorManager
 
         // load previous status if any
+        SharedPrefMgr.instance.init(context!!)
         startDate = SharedPrefMgr.instance.loadStartDate()
         counterSteps = SharedPrefMgr.instance.loadInitialStepCount()
 
